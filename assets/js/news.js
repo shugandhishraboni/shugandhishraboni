@@ -27,4 +27,11 @@ window.NEWS = [
     "image": "assets/images/exhibitions/exhibition_12.jpg",
     "text": "Participation in an international online exhibition with artists from different countries."
   }
+  {
+  date: "30 August 2026",
+  title: "Portfolio Website Updated",
+  meta: "Artist Portfolio · 2026",
+  image: "assets/images/profile.jpg",
+  text: "The official artist portfolio website of Shugandhi Chowdhury Shraboni has been updated with recent works, exhibitions, teaching practice, and professional portfolio materials."
+}
 ];
