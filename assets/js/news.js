@@ -26,7 +26,7 @@ window.NEWS = [
     "meta": "International online exhibition",
     "image": "assets/images/exhibitions/exhibition_12.jpg",
     "text": "Participation in an international online exhibition with artists from different countries."
-  }
+  },
   {
   date: "30 August 2026",
   title: "Portfolio Website Updated",
