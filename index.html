@@ -2,40 +2,146 @@
 
 <html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Official portfolio of Shugandhi Chowdhury Shraboni, Bangladeshi craft artist and fine arts educator." name="description"/>
-<title>Shugandhi Chowdhury Shraboni | Artist &amp; Art Educator</title><link href="assets/css/style.css" rel="stylesheet"/></head><body>
-<header class="topbar"><div class="container nav"><div class="brand">Shugandhi Chowdhury Shraboni<small>Craft Artist · Fine Arts Educator</small></div><button class="menu-btn" id="menuBtn">☰</button><nav class="menu" id="menu"><a href="#spotlight">Spotlight</a><a href="#home">Home</a><a href="#works">Works</a><a href="#about">About</a><a href="#exhibitions">Exhibitions &amp; Recognition</a><a href="#awards">Awards</a><a href="#education">Education Practice</a><a href="#training">Training</a><a href="#news">News</a><a href="#documents">Documents</a><a href="#contact">Contact</a></nav></div></header>
+<title>Shugandhi Chowdhury Shraboni | Artist &amp; Art Educator</title><link href="assets/css/style.css" rel="stylesheet"/><link href="assets/css/portfolio-ui.css" rel="stylesheet"/>
+</head><body>
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand brand-link" href="#spotlight" aria-label="Shugandhi Chowdhury Shraboni portfolio home">
+      Shugandhi Chowdhury Shraboni
+      <small>Craft Artist · Fine Arts Educator</small>
+    </a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+
+    <nav class="menu artistic-menu" id="menu" aria-label="Primary navigation">
+      <a class="nav-item" href="#spotlight" data-nav-section="spotlight">Spotlight</a>
+      <a class="nav-item" href="#works" data-nav-section="works">Works</a>
+      <a class="nav-item" href="#about" data-nav-section="about">About</a>
+
+      <details class="nav-dropdown">
+        <summary class="nav-item">Recognition</summary>
+        <div class="dropdown-menu">
+          <a href="#exhibitions" data-nav-section="exhibitions">
+            <span>Exhibitions</span>
+            <small>Shows &amp; selected presentations</small>
+          </a>
+          <a href="#awards" data-nav-section="awards">
+            <span>Awards</span>
+            <small>Distinctions &amp; certificates</small>
+          </a>
+          <a href="#news" data-nav-section="news">
+            <span>News</span>
+            <small>Recent updates</small>
+          </a>
+        </div>
+      </details>
+
+      <details class="nav-dropdown">
+        <summary class="nav-item">Practice</summary>
+        <div class="dropdown-menu">
+          <a href="#education" data-nav-section="education">
+            <span>Education Practice</span>
+            <small>Teaching &amp; student work</small>
+          </a>
+          <a href="#training" data-nav-section="training">
+            <span>Training</span>
+            <small>Professional development</small>
+          </a>
+          <a href="#documents" data-nav-section="documents">
+            <span>Documents</span>
+            <small>Résumé &amp; portfolio</small>
+          </a>
+        </div>
+      </details>
+
+      <a class="nav-item nav-contact" href="#contact" data-nav-section="contact">Contact</a>
+    </nav>
+  </div>
+</header>
 <main>
 
-<section id="spotlight">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow">Spotlight · 2026</span>
-        <h2>AweSnapp Art Awards</h2>
+<section class="spotlight-section" id="spotlight">
+  <div class="container spotlight-layout">
+
+    <figure class="spotlight-visual">
+      <a
+        class="spotlight-art-link"
+        href="https://awesnapp.com/congratulations-to-awesnapps-monthly-award-winner/"
+        target="_blank"
+        rel="noopener"
+        aria-label="Open the official AweSnapp Open Theme exhibition"
+      >
+        <img
+          src="assets/images/artworks/2026_Where_Love_Finds_Its_Reflection.jpg"
+          alt="Where Love Finds Its Reflection, tapestry by Shugandhi Chowdhury Shraboni"
+        />
+        <span class="art-hover-label">View exhibition ↗</span>
+      </a>
+      <figcaption>
+        <span>Selected artwork · Tapestry</span>
+        <strong>Where Love Finds Its Reflection</strong>
+      </figcaption>
+    </figure>
+
+    <div class="spotlight-content">
+      <p class="spotlight-overline">Spotlight · September 2026</p>
+
+      <div class="spotlight-status">
+        <span class="status-dot" aria-hidden="true"></span>
+        Finalist Artist of Distinction
       </div>
-      <p>Recent international recognition and exhibition news.</p>
-    </div>
-    <div class="intro-grid">
-      <div class="about-text">
-        <span class="eyebrow">Finalist Artist of Distinction · Open Theme</span>
-        <h2 class="serif">Where Love Finds Its Reflection</h2>
-        <p>Shugandhi Chowdhury Shraboni was recognized as a <strong>Finalist Artist of Distinction</strong> in the 2026 AweSnapp Art Awards Open Theme. The selected tapestry, <em>Where Love Finds Its Reflection</em>, is included in the online exhibition opening September 24, 2026.</p>
-        <div class="actions">
-          <a class="btn primary" href="#awards">View award details</a>
-          <a class="btn" href="assets/images/awards/2026_awesnapp_finalist_artist_of_distinction.jpg" rel="noopener" target="_blank">View certificate</a>
+
+      <h1>AweSnapp Art Awards</h1>
+      <p class="spotlight-title"><em>Where Love Finds Its Reflection</em></p>
+
+      <p class="spotlight-summary">
+        Shugandhi Chowdhury Shraboni’s tapestry <em>Where Love Finds Its Reflection</em>
+        was selected for the AweSnapp Art Awards <strong>Open Theme</strong> exhibition.
+        The work is presented in the online exhibition opening September 24, 2026,
+        with recognition as a <strong>Finalist Artist of Distinction</strong>.
+      </p>
+
+      <div class="spotlight-facts" aria-label="Exhibition details">
+        <div>
+          <small>Theme</small>
+          <strong>Open Theme</strong>
+        </div>
+        <div>
+          <small>Format</small>
+          <strong>Online Exhibition</strong>
+        </div>
+        <div>
+          <small>Opening</small>
+          <strong>24 Sep 2026</strong>
         </div>
       </div>
-      <div class="portrait">
-        <img alt="AweSnapp Art Awards 2026 Finalist Artist of Distinction certificate for Shugandhi Chowdhury Shraboni" src="assets/images/awards/2026_awesnapp_finalist_artist_of_distinction.jpg"/>
+
+      <div class="spotlight-actions">
+        <a
+          class="btn primary exhibition-btn"
+          href="https://awesnapp.com/congratulations-to-awesnapps-monthly-award-winner/"
+          target="_blank"
+          rel="noopener"
+        >View Official Exhibition <span aria-hidden="true">↗</span></a>
+
+        <a
+          class="btn"
+          href="assets/images/awards/2026_awesnapp_finalist_artist_of_distinction.jpg"
+          target="_blank"
+          rel="noopener"
+        >View Certificate</a>
+
+        <a class="text-arrow-link" href="#awards">Award details <span aria-hidden="true">→</span></a>
       </div>
     </div>
+
   </div>
 </section>
 
 <section class="hero" id="home"><div class="hero-copy"><span class="eyebrow">Bangladesh · Craft · Cultural Memory · Art Education</span><h1>Material stories, rooted in life.</h1><p>Shugandhi Chowdhury Shraboni is a Bangladeshi craft artist and fine arts educator. Her practice spans watercolor, brush pen, wood, fiber, metal, screen print, collage, ceramic mosaic and installation.</p><div class="actions"><a class="btn primary" href="#works">Explore the work</a><a class="btn" href="assets/docs/Digital_Artist_Portfolio.pdf" target="_blank">Digital portfolio</a></div></div><div class="hero-art"><img alt="Witness_of_Time" src="assets/images/artworks/2026_Witness_of_Time.jpg"/></div></section>
 <section id="about"><div class="container intro-grid"><div class="portrait"><img alt="Shugandhi Chowdhury Shraboni" src="assets/images/profile.jpg"/></div><div class="about-text"><span class="eyebrow">About the artist</span><h2 class="serif">Craft, cultural memory and art education</h2><p class="quote">My practice connects material skill with stories of family, community, nature and cultural inheritance.</p><p>Shugandhi Chowdhury Shraboni completed a Bachelor of Fine Art in Craft and a Master of Fine Art in Craft at the University of Rajshahi, Bangladesh, and a Bachelor of Education from National University, Bangladesh. Her recent studio work expands into watercolor and brush-pen drawing while continuing a long-standing engagement with handmade materials, Bengali cultural imagery and lived experience.</p><div class="education-box"><h3>Education</h3><p><strong>Master of Fine Art (MFA) in Craft</strong><br/>University of Rajshahi · 2013</p><p><strong>Bachelor of Education (B.Ed.) - First Class</strong><br/>National University, Bangladesh · Examination 2014<br/>National Teachers Training Institute, Khilkhet, Dhaka</p><p><strong>Bachelor of Fine Art (BFA) in Craft</strong><br/>University of Rajshahi · 2011</p></div><div class="stats"><div class="stat"><strong>47</strong>works in the current website archive</div><div class="stat"><strong>2026</strong>expanded recent practice</div><div class="stat"><strong>2013–</strong>professional teaching</div></div></div></div></section>
 <section class="works" id="works"><div class="container"><div class="section-head"><div><span class="eyebrow">Selected archive</span><h2>Works</h2></div><p>Explore the portfolio by medium. Recent 2026 watercolor and brush-pen works are presented first, followed by selected works in wood, fiber, print, metal, collage and ceramic.</p></div><div class="filters"><button class="filter active" data-cat="All">All</button><button class="filter" data-cat="Recent Works">Recent Works</button><button class="filter" data-cat="Wood">Wood</button><button class="filter" data-cat="Tapestry / Fiber Art">Fiber</button><button class="filter" data-cat="Screen Print">Screen Print</button><button class="filter" data-cat="Metal Work">Metal</button><button class="filter" data-cat="Paper Collage">Collage</button><button class="filter" data-cat="Ceramic Mosaic">Ceramic</button></div><div class="gallery" id="gallery"></div></div></section>
-<section id="exhibitions"><div class="container"><div class="section-head"><div><span class="eyebrow">Exhibitions &amp; recognition</span><h2>Exhibitions &amp; Recognition</h2></div><p>Selected exhibitions, international presentations and recent recognition, supported by available documentation.</p></div><div class="intro-grid"><div class="timeline"><div class="timeline-item"><span class="eyebrow">2026 · Selected Artist</span><h3>The Holy Art Times Square Showcase</h3><p><em>Witness of Times</em> · Selected for an upcoming digital presentation in Times Square, New York, NY.</p></div><div class="timeline-item"><span class="eyebrow">2026 · Open Theme · Finalist</span><h3>AweSnapp Art Awards</h3><p><em>Where Love Finds Its Reflection</em> · Selected as a Finalist Artist of Distinction and included in the online Open Theme exhibition opening September 24, 2026.</p><p><a class="btn" href="assets/images/awards/2026_awesnapp_finalist_artist_of_distinction.jpg" rel="noopener" target="_blank">View certificate</a></p></div><div class="timeline-item"><span class="eyebrow">2026</span><h3>Monsoon Art Exhibition</h3><p>Birla Academy of Art and Culture, Kolkata, West Bengal, India · 10–14 June 2026.</p></div><div class="timeline-item"><span class="eyebrow">2020</span><h3>Online International Art Exhibition</h3><p>International online group exhibition.</p></div><div class="timeline-item"><span class="eyebrow">2006–2013</span><h3>Annual Art Exhibitions</h3><p>Department of Fine Arts, University of Rajshahi, Bangladesh.</p></div></div><div class="mosaic"><img alt="Monsoon Art Exhibition" src="assets/images/exhibitions/exhibition_13.jpg"/><img alt="Exhibition documentation" src="assets/images/exhibitions/exhibition_10.jpg"/><img alt="Online exhibition documentation" src="assets/images/exhibitions/exhibition_12.jpg"/><img alt="Annual exhibition catalogue" src="assets/images/exhibitions/exhibition_02.jpg"/><img alt="Annual art exhibition catalogue" src="assets/images/exhibitions/exhibition_05.jpg"/><img alt="Exhibition catalogue" src="assets/images/exhibitions/exhibition_08.jpg"/></div></div></div></section>
+<section id="exhibitions"><div class="container"><div class="section-head"><div><span class="eyebrow">Exhibitions &amp; recognition</span><h2>Exhibitions &amp; Recognition</h2></div><p>Selected exhibitions, international presentations and recent recognition, supported by available documentation.</p></div><div class="intro-grid"><div class="timeline"><div class="timeline-item"><span class="eyebrow">2026 · Selected Artist</span><h3>The Holy Art Times Square Showcase</h3><p><em>Witness of Times</em> · Selected for an upcoming digital presentation in Times Square, New York, NY.</p></div><div class="timeline-item"><span class="eyebrow">2026 · Open Theme · Finalist</span><h3>AweSnapp Art Awards</h3><p><em>Where Love Finds Its Reflection</em> · Selected as a Finalist Artist of Distinction and included in the online Open Theme exhibition opening September 24, 2026.</p><p class="record-actions"><a class="btn primary" href="https://awesnapp.com/congratulations-to-awesnapps-monthly-award-winner/" rel="noopener" target="_blank">View exhibition</a> <a class="btn" href="assets/images/awards/2026_awesnapp_finalist_artist_of_distinction.jpg" rel="noopener" target="_blank">View certificate</a></p></div><div class="timeline-item"><span class="eyebrow">2026</span><h3>Monsoon Art Exhibition</h3><p>Birla Academy of Art and Culture, Kolkata, West Bengal, India · 10–14 June 2026.</p></div><div class="timeline-item"><span class="eyebrow">2020</span><h3>Online International Art Exhibition</h3><p>International online group exhibition.</p></div><div class="timeline-item"><span class="eyebrow">2006–2013</span><h3>Annual Art Exhibitions</h3><p>Department of Fine Arts, University of Rajshahi, Bangladesh.</p></div></div><div class="mosaic"><img alt="Monsoon Art Exhibition" src="assets/images/exhibitions/exhibition_13.jpg"/><img alt="Exhibition documentation" src="assets/images/exhibitions/exhibition_10.jpg"/><img alt="Online exhibition documentation" src="assets/images/exhibitions/exhibition_12.jpg"/><img alt="Annual exhibition catalogue" src="assets/images/exhibitions/exhibition_02.jpg"/><img alt="Annual art exhibition catalogue" src="assets/images/exhibitions/exhibition_05.jpg"/><img alt="Exhibition catalogue" src="assets/images/exhibitions/exhibition_08.jpg"/></div></div></div></section>
 
 <section id="awards">
   <div class="container">
@@ -54,7 +160,7 @@
         <p><strong>Artwork:</strong> <em>Where Love Finds Its Reflection</em></p>
         <p><strong>Medium:</strong> Tapestry</p>
         <p><strong>Status:</strong> Selected Artist · Finalist Artist of Distinction</p>
-        <p><a class="btn primary" href="assets/images/awards/2026_awesnapp_finalist_artist_of_distinction.jpg" rel="noopener" target="_blank">View certificate</a></p>
+        <p class="record-actions"><a class="btn primary" href="https://awesnapp.com/congratulations-to-awesnapps-monthly-award-winner/" rel="noopener" target="_blank">View exhibition</a> <a class="btn" href="assets/images/awards/2026_awesnapp_finalist_artist_of_distinction.jpg" rel="noopener" target="_blank">View certificate</a></p>
       </div>
     </div>
   </div>
@@ -81,9 +187,89 @@
 <div class="timeline-item"><span class="eyebrow">Design Training</span><h3>Graphic Design Course</h3><p>Charu Soft, Rajshahi, Bangladesh.</p></div>
 </div></div></section>
 <section id="workshops"><div class="container"><div class="section-head"><div><span class="eyebrow">Field practice</span><h2>Workshops &amp; art camps</h2></div><p>Participation in art camps extends the studio into shared spaces of observation, exchange and public engagement.</p></div><div class="mosaic"><img alt="Art camp activity" src="assets/images/workshops/workshop_01.jpg"/><img alt="Art camp coverage" src="assets/images/workshops/workshop_02.jpg"/><img alt="Art camp activity" src="assets/images/workshops/workshop_03.jpg"/><img alt="Art camp group" src="assets/images/workshops/workshop_04.jpg"/><img alt="News coverage" src="assets/images/workshops/workshop_05.jpg"/><img alt="Newspaper coverage" src="assets/images/workshops/workshop_06.jpg"/></div></div></section>
-<section class="works" id="news"><div class="container"><div class="section-head"><div><span class="eyebrow">Current practice</span><h2>News &amp; updates</h2></div><p>Recent artwork, exhibitions, awards, workshops and educational projects.</p></div><div class="timeline"><div class="timeline-item"><span class="eyebrow">September 24, 2026 · Award &amp; Exhibition</span><h3>AweSnapp Open Theme Finalist</h3><p><em>Where Love Finds Its Reflection</em> was selected for the AweSnapp Art Awards Open Theme exhibition, and Shugandhi Chowdhury Shraboni received recognition as a <strong>Finalist Artist of Distinction</strong>.</p><p><a class="btn" href="assets/images/awards/2026_awesnapp_finalist_artist_of_distinction.jpg" rel="noopener" target="_blank">View certificate</a></p></div></div><div class="news-grid" id="newsGrid"></div></div></section>
+<section class="works" id="news"><div class="container"><div class="section-head"><div><span class="eyebrow">Current practice</span><h2>News &amp; updates</h2></div><p>Recent artwork, exhibitions, awards, workshops and educational projects.</p></div><div class="timeline"><div class="timeline-item"><span class="eyebrow">September 24, 2026 · Award &amp; Exhibition</span><h3>AweSnapp Open Theme Finalist</h3><p><em>Where Love Finds Its Reflection</em> was selected for the AweSnapp Art Awards Open Theme exhibition, and Shugandhi Chowdhury Shraboni received recognition as a <strong>Finalist Artist of Distinction</strong>.</p><p class="record-actions"><a class="btn primary" href="https://awesnapp.com/congratulations-to-awesnapps-monthly-award-winner/" rel="noopener" target="_blank">View exhibition</a> <a class="btn" href="assets/images/awards/2026_awesnapp_finalist_artist_of_distinction.jpg" rel="noopener" target="_blank">View certificate</a></p></div></div><div class="news-grid" id="newsGrid"></div></div></section>
 <section id="documents"><div class="container"><div class="section-head"><div><span class="eyebrow">Applications</span><h2>Documents</h2></div><p>Current documents for exhibitions, competitions, visiting artist opportunities and academic collaboration.</p></div><div class="documents"><div class="doc"><h3>International Artist Résumé</h3><p>Updated education, teaching experience, exhibitions, recent recognition and professional practice.</p><a class="btn primary" href="assets/docs/Artist_Resume.pdf" target="_blank">Open résumé</a></div><div class="doc"><h3>Digital Artist Portfolio</h3><p>Curated artist portfolio with recent and selected earlier work.</p><a class="btn primary" href="assets/docs/Digital_Artist_Portfolio.pdf" target="_blank">Open portfolio</a></div></div></div></section>
 </main>
 <footer id="contact"><div class="container footer-grid"><div><span class="eyebrow">Contact</span><h2 class="serif">Let’s connect through art, teaching and research.</h2><p>Dhaka, Bangladesh<br/><a href="mailto:shugandhichowdhuryshraboni@gmail.com">shugandhichowdhuryshraboni@gmail.com</a></p></div><div><h3>Professional links</h3><p><a href="https://www.linkedin.com/in/shugandhi-chowdhury-65ba0127a" rel="noopener" target="_blank">LinkedIn</a><br/><a href="https://shugandhishraboni.netlify.app/" rel="noopener" target="_blank">Web Portfolio</a></p></div></div><div class="container"><small>© 2026 Shugandhi Chowdhury Shraboni. All artwork images are presented for portfolio purposes.</small></div></footer>
 <div class="modal" id="modal"><button class="close" id="closeModal">×</button><div class="modal-inner"><img alt="Artwork" id="modalImg"/><div class="modal-info"><span class="eyebrow">Artwork</span><h2 id="modalTitle"></h2><p class="meta" id="modalMeta"></p><p id="modalDesc"></p></div></div></div>
-<script src="assets/js/artworks.js"></script><script src="assets/js/news.js"></script><script src="assets/js/main.js"></script></body></html>
+<script src="assets/js/artworks.js"></script><script src="assets/js/news.js"></script><script src="assets/js/main.js"></script>
+
+<script>
+(function () {
+  const menu = document.getElementById("menu");
+  const menuBtn = document.getElementById("menuBtn");
+  const dropdowns = Array.from(document.querySelectorAll(".nav-dropdown"));
+  const trackedLinks = Array.from(document.querySelectorAll("[data-nav-section]"));
+
+  // Keep dropdowns tidy: only one can be open at a time.
+  dropdowns.forEach((dropdown) => {
+    dropdown.addEventListener("toggle", () => {
+      if (!dropdown.open) return;
+      dropdowns.forEach((other) => {
+        if (other !== dropdown) other.removeAttribute("open");
+      });
+    });
+  });
+
+  // Close dropdowns when clicking elsewhere.
+  document.addEventListener("click", (event) => {
+    dropdowns.forEach((dropdown) => {
+      if (!dropdown.contains(event.target)) dropdown.removeAttribute("open");
+    });
+  });
+
+  // Close a dropdown after choosing one of its links.
+  document.querySelectorAll(".dropdown-menu a").forEach((link) => {
+    link.addEventListener("click", () => {
+      const parent = link.closest(".nav-dropdown");
+      if (parent) parent.removeAttribute("open");
+    });
+  });
+
+  // Active navigation follows the section currently being viewed.
+  const sections = Array.from(document.querySelectorAll(
+    "#spotlight, #works, #about, #exhibitions, #awards, #education, #training, #news, #documents, #contact"
+  ));
+
+  function setActive(sectionId) {
+    trackedLinks.forEach((link) => {
+      link.classList.toggle("is-active", link.dataset.navSection === sectionId);
+    });
+
+    dropdowns.forEach((dropdown) => {
+      const childActive = dropdown.querySelector('[data-nav-section="' + sectionId + '"]');
+      dropdown.classList.toggle("has-active-child", Boolean(childActive));
+    });
+  }
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+      if (visible.length) setActive(visible[0].target.id);
+    }, {
+      rootMargin: "-25% 0px -60% 0px",
+      threshold: [0.08, 0.2, 0.45]
+    });
+
+    sections.forEach((section) => observer.observe(section));
+  }
+
+  // Accessibility: reflect mobile menu state when the existing main.js changes it.
+  if (menuBtn && menu) {
+    menuBtn.addEventListener("click", () => {
+      window.setTimeout(() => {
+        const open =
+          menu.classList.contains("open") ||
+          menu.classList.contains("active") ||
+          menu.classList.contains("show");
+        menuBtn.setAttribute("aria-expanded", String(open));
+      }, 0);
+    });
+  }
+})();
+</script>
+
+</body></html>
