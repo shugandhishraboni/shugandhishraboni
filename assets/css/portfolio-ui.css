@@ -1,0 +1,563 @@
+
+/* =========================================================
+   Portfolio UI enhancement
+   Navigation + Spotlight + hero artwork alignment
+   ========================================================= */
+
+/* ---------- Header / navigation ---------- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(251, 248, 240, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(74, 48, 31, 0.10);
+}
+
+.topbar .nav {
+  display: flex;
+  align-items: center;
+  min-height: 84px;
+  gap: 28px;
+}
+
+.brand-link {
+  flex: 0 1 320px;
+  color: inherit;
+  text-decoration: none;
+  line-height: 1.2;
+  transition: opacity 180ms ease;
+}
+
+.brand-link:hover {
+  opacity: 0.72;
+}
+
+.artistic-menu {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+  flex-wrap: nowrap;
+}
+
+.artistic-menu .nav-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 46px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  color: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 650;
+  line-height: 1;
+  transition:
+    background 180ms ease,
+    color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.artistic-menu > a.nav-item:hover,
+.nav-dropdown > summary.nav-item:hover,
+.artistic-menu .nav-item.is-active,
+.nav-dropdown.has-active-child > summary {
+  background: rgba(126, 75, 43, 0.09);
+  transform: translateY(-1px);
+}
+
+.artistic-menu .nav-item.is-active::after,
+.nav-dropdown.has-active-child > summary::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 5px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  opacity: 0.58;
+}
+
+.nav-contact {
+  border: 1px solid rgba(126, 75, 43, 0.28);
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown > summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.nav-dropdown > summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-dropdown > summary::after {
+  content: "⌄";
+  margin-left: 7px;
+  transform-origin: center;
+  opacity: 0.62;
+  transition: transform 180ms ease;
+}
+
+.nav-dropdown[open] > summary::after {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 9px);
+  right: 0;
+  width: 285px;
+  padding: 10px;
+  border: 1px solid rgba(74, 48, 31, 0.11);
+  border-radius: 18px;
+  background: rgba(255, 253, 248, 0.98);
+  box-shadow: 0 24px 70px rgba(63, 41, 27, 0.16);
+  transform-origin: top right;
+  animation: navDrop 170ms ease-out;
+}
+
+@keyframes navDrop {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 13px;
+  border-radius: 12px;
+  color: inherit;
+  text-decoration: none;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.dropdown-menu a + a {
+  margin-top: 3px;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a.is-active {
+  background: rgba(126, 75, 43, 0.085);
+  transform: translateX(2px);
+}
+
+.dropdown-menu span,
+.dropdown-menu small {
+  display: block;
+}
+
+.dropdown-menu span {
+  font-weight: 700;
+}
+
+.dropdown-menu small {
+  margin-top: 3px;
+  font-size: 0.76rem;
+  line-height: 1.35;
+  opacity: 0.62;
+}
+
+/* ---------- Spotlight: normal BODY section ---------- */
+.spotlight-section {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(52px, 7vw, 88px) 0;
+  background:
+    radial-gradient(circle at 7% 9%, rgba(158, 101, 56, 0.11), transparent 32%),
+    radial-gradient(circle at 92% 88%, rgba(101, 123, 91, 0.09), transparent 28%),
+    #f8f3e9;
+  border-bottom: 1px solid rgba(74, 48, 31, 0.09);
+}
+
+.spotlight-section::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  right: -120px;
+  top: -125px;
+  border: 1px solid rgba(126, 75, 43, 0.15);
+  border-radius: 50%;
+}
+
+.spotlight-layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(380px, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(42px, 6vw, 82px);
+  align-items: center;
+}
+
+.spotlight-visual {
+  margin: 0;
+  min-width: 0;
+}
+
+.spotlight-art-link {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 390px;
+  padding: clamp(20px, 3vw, 34px);
+  overflow: hidden;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(73, 48, 31, 0.12);
+  box-shadow: 0 28px 68px rgba(64, 42, 27, 0.12);
+}
+
+.spotlight-art-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+  object-position: center center;
+  transition: transform 400ms ease, filter 400ms ease;
+}
+
+.spotlight-art-link:hover img {
+  transform: scale(1.025);
+  filter: saturate(1.03);
+}
+
+.art-hover-label {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(44, 31, 23, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-size: 0.78rem;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.spotlight-art-link:hover .art-hover-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.spotlight-visual figcaption {
+  padding: 16px 7px 0;
+}
+
+.spotlight-visual figcaption span,
+.spotlight-visual figcaption strong {
+  display: block;
+}
+
+.spotlight-visual figcaption span {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  opacity: 0.62;
+}
+
+.spotlight-visual figcaption strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+  line-height: 1.25;
+}
+
+.spotlight-content {
+  max-width: 690px;
+}
+
+.spotlight-overline {
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.20em;
+  font-size: 0.77rem;
+  font-weight: 800;
+  opacity: 0.72;
+}
+
+.spotlight-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding: 8px 13px;
+  border: 1px solid rgba(126, 75, 43, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.55);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.68;
+}
+
+.spotlight-content h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.7rem, 5vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+}
+
+.spotlight-title {
+  margin: 13px 0 22px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.45rem, 2.3vw, 2.15rem);
+  line-height: 1.25;
+}
+
+.spotlight-summary {
+  max-width: 63ch;
+  margin: 0;
+  font-size: 1.04rem;
+  line-height: 1.78;
+}
+
+.spotlight-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 28px 0;
+}
+
+.spotlight-facts div {
+  padding: 13px 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.50);
+  border: 1px solid rgba(73, 48, 31, 0.09);
+}
+
+.spotlight-facts small,
+.spotlight-facts strong {
+  display: block;
+}
+
+.spotlight-facts small {
+  margin-bottom: 5px;
+  font-size: 0.70rem;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  opacity: 0.58;
+}
+
+.spotlight-facts strong {
+  font-size: 0.90rem;
+  line-height: 1.35;
+}
+
+.spotlight-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 11px;
+}
+
+.exhibition-btn span,
+.text-arrow-link span {
+  display: inline-block;
+  transition: transform 160ms ease;
+}
+
+.exhibition-btn:hover span {
+  transform: translate(2px, -2px);
+}
+
+.text-arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 3px;
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.text-arrow-link:hover span {
+  transform: translateX(3px);
+}
+
+/* ---------- Hero image alignment ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 0.92fr);
+  align-items: stretch;
+}
+
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.hero-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 540px;
+  padding: clamp(22px, 3vw, 42px);
+  overflow: hidden;
+}
+
+.hero-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 560px;
+  object-fit: contain;
+  object-position: center center;
+  margin: 0 auto;
+}
+
+/* Buttons inside permanent award/exhibition records */
+.record-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+/* Sticky header offset */
+#spotlight, #home, #works, #about, #exhibitions, #awards,
+#education, #training, #news, #documents, #contact {
+  scroll-margin-top: 105px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1120px) {
+  .topbar .nav {
+    gap: 16px;
+  }
+
+  .brand-link {
+    flex-basis: 260px;
+  }
+
+  .artistic-menu {
+    gap: 2px;
+  }
+
+  .artistic-menu .nav-item {
+    padding-left: 9px;
+    padding-right: 9px;
+    font-size: 0.92rem;
+  }
+
+  .spotlight-layout {
+    gap: 38px;
+  }
+}
+
+@media (max-width: 900px) {
+  .topbar .nav {
+    min-height: 72px;
+  }
+
+  .artistic-menu .nav-item {
+    border-radius: 12px;
+  }
+
+  .nav-dropdown {
+    width: 100%;
+  }
+
+  .nav-dropdown > summary.nav-item {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    margin: 3px 0 7px;
+    padding: 5px;
+    border-radius: 13px;
+    box-shadow: none;
+    background: rgba(126, 75, 43, 0.045);
+  }
+
+  .spotlight-layout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .spotlight-visual {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .spotlight-content {
+    max-width: none;
+  }
+
+  .spotlight-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-art {
+    min-height: auto;
+    padding-top: 16px;
+  }
+
+  .hero-art img {
+    height: auto;
+    max-height: 640px;
+  }
+}
+
+@media (max-width: 600px) {
+  .spotlight-section {
+    padding: 38px 0 48px;
+  }
+
+  .spotlight-art-link {
+    min-height: 250px;
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .spotlight-content h1 {
+    font-size: clamp(2.35rem, 13vw, 3.4rem);
+  }
+
+  .spotlight-actions {
+    align-items: stretch;
+  }
+
+  .spotlight-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .text-arrow-link {
+    width: fit-content;
+  }
+}
